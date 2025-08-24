@@ -1,0 +1,31 @@
+[package]
+name = "walletgen"
+version = "0.1.0"
+edition = "2021"
+authors = ["Geovani Rodriguez"]
+description = "Secure, offline Bitcoin & Ethereum wallet generator CLI"
+license = "MIT"
+repository = "https://github.com/YOUR_USERNAME/walletgen"
+readme = "README.md"
+
+[dependencies]
+# Crypto core
+secp256k1 = { version = "0.27", features = ["rand-std"] }
+rand = "0.8.5"
+sha2 = "0.10"
+ripemd = "0.1"
+bs58 = "0.4"
+tiny-keccak = { version = "2.0", features = ["keccak"] }
+hex = "0.4"
+
+# CLI + JSON + Encryption
+clap = { version = "4.5", features = ["derive"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+base64 = "0.21"
+aes-gcm = "0.10"
+pbkdf2 = "0.12"
+rpassword = "7.3"
+
+# Terminal QR codes
+qrcode = "0.12"
